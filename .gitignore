@@ -34,7 +34,7 @@
 
 # Ignor secrets Ermakova
 /app/assets/config/secrets.yml
-.idea/*
+**/.idea/
 
 /public/packs
 /public/packs-test
