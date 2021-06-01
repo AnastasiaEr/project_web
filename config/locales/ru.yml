@@ -5,7 +5,7 @@ ru:
 
   shared:
     header:
-      logo_title: "Experteese на Ruby_on_Rails"
+      logo_title: "Experteese"
       home: "Главная"
       help: "Помощь"
       sign_in: "Войти"
