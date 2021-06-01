@@ -1,3 +1,9 @@
+function evaluation(value){
+    var val=parseInt(value);
+    return val
+}
+
+// get data from controller
 var imageData = '<%= raw @image_data %>';
 console.log("IN display_theme: @image_data = " + imageData );
 var valuesQty = '<%= @image_data[:values_qty] %>';
@@ -16,6 +22,31 @@ if( selectedTheme == "Выберите тему для оценки" || selected
     $('.img-right-side').css({"display": "block"});
     $('.image .image_display .image_diag').css({"display": "block"});
 }
+
+//
+var userValuedImage = '<%= @image_data[:user_valued] %>';
+
+if(userValuedImage === 1){
+    console.log("3c1 IN IF: userValuedImage == true? == " + userValuedImage);
+    $('.left_controls span.common_value').css({"display": "block"});
+    $('.image .image_display .image_diag').css({"display": "none"});
+    var imageCommonValue = '<%= @image_data[:common_ave_value] %>';
+    var evaluated = evaluation(imageCommonValue);
+    console.log("3c2 IN IF: imageCommonValue = " + evaluated);
+    $('.left_controls span.common_value h2.common').append().html(evaluated);
+
+    var imageValue = '<%= @image_data[:value] %>';
+    evaluated = evaluation(imageValue);
+    $('.image .image_display .image_user_value').append().html(evaluated).css({"display": "block"});
+}else{
+    $('.left_controls span.common_value').css({"display": "none"});
+    $('.image .image_display .image_user_value').css({"display": "none"});
+}
+
+var currentUserId = '<%= @image_data[:current_user_id] %>';
+console.log("3d IN display_theme: currentUserId = " + currentUserId);
+//
+
 
 $('.image_display h2.up-theme').append().html(selectedTheme);
 
@@ -41,6 +72,8 @@ var pathImage = "assets/pictures/" + oneImageFile;
 // $('.img-center').html('<img alt="Selected Image" src="'+ pathImage + '"/>');
 $(".img-center").attr({title: "Selected image" });
 $(".img-center img").attr({alt: "Selected Image", src: pathImage, title: "Selected image" });
+document.getElementById("slide").value=50;
+$("#slide").trigger("change");
 
 
 // AJAX call to next image list
@@ -55,6 +88,8 @@ $('.img-right-side').click(function(event) {
             length: themeImagesSize },
         dataType: 'json'
     }).done(function (data_return) {
+        document.getElementById("slide").value=50;
+        $("#slide").trigger("change");
         console.log("success1c:  " + data_return.notice );
         imageCurrentIndex = data_return.new_image_index;
         oneImageName = data_return.name;

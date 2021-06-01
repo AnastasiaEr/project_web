@@ -54,14 +54,14 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Ermakova 2021.03.03
 # Use jquery as the JavaScript library
-gem 'jquery-ui-rails'
-gem 'rails-asset-jqueryui'
+#gem 'jquery-ui-rails'
+#gem 'rails-asset-jqueryui'
 
 # Use SАSS for stylesheets
 # gem 'sass-rails', '~> 5.0'
 
 # Installed 3.3.7 - пример
-gem 'bootstrap-sass', '3.3.7'
+# gem 'bootstrap-sass', '3.3.7'
 
 # Icons fonts
 gem 'font-awesome-sass' #, '~> 4.6.2'
@@ -95,6 +95,7 @@ gem "haml-rails", "~> 2.0"
 gem "html2haml"
 
 gem 'bootstrap', '~> 5.0.0.beta2'
+
 
 
 

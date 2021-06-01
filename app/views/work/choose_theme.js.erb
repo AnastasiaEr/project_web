@@ -17,3 +17,28 @@ $(document).click(function(e){
 });
 
 $('.select_theme').empty().html("<%= j render 'choose_theme_from_arr' -%>");
+
+
+$("#slide").change(function (){
+    //get the element
+    var displayValue = document.getElementById("chosen_value");
+    //show the amount
+    var val=parseInt(this.value)
+    var theme=$(".up-theme")[0];
+    displayValue.setAttribute("value",this.value)
+    displayValue.innerHTML= val.toString();
+    /*
+    if(val<50){
+        displayValue.innerHTML=theme.innerText.split(" ")[0]+" "+((-val+50)*2).toString()+"%";
+    }
+    else if(val>50){
+        displayValue.innerHTML=theme.innerText.split(" ")[2].slice(0,-1)+" "+((val-50)*2).toString()+"%";
+    }
+    $('#slider-left').empty().append(theme.innerText.split(" ")[0]+" 100%");
+    $('#slider-right').empty().append(theme.innerText.split(" ")[2].slice(0,-1)+" 100%");
+    */
+});
+
+
+
+$('.select_theme').empty().html("<%= j render 'choose_theme_from_arr', locale:@current_locale %>");

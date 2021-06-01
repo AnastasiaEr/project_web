@@ -29,9 +29,16 @@ Rails.application.routes.draw do
   match 'choose_theme', to: 'work#choose_theme', via: :get
   match 'display_theme', to: 'work#display_theme', via: :post, as: :js
 
+
+  match 'results_list',     to: 'work#results_list', via: :get
+  match 'save_value',       to: 'api/api#save_value',   via: :get
+
+
   match 'signup', to: 'users#new', via: 'get'
   match 'signin', to: 'sessions#new', via: 'get'
   match 'signout', to: 'sessions#destroy', via: 'delete'
+
+  get 'main/index'
 
   #root 'work#index'
 
