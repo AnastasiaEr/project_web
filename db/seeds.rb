@@ -11,10 +11,17 @@ Image.delete_all
 Image.reset_pk_sequence
 Image.create([
 
-               {name: 'P.-A. Renoir, Бал в Мулен де ла Галетт', file: 'Renoir Бал в Мулен де ла Галлет.jpg', theme_id: 2},
-               {name: 'P.-A. Renoir, Букет', file: 'Renoir букет.jpg', theme_id: 2},
-               {name: 'P. Picasso, Фабрика', file: 'Picasso Fabrique.jpg', theme_id: 3},
-               {name: 'H. Matiss, Балерина', file: 'Matiss Балерина.jpg', theme_id: 4},
+               {name: 'TR1', file: 'TR1.jpg', theme_id: 2},
+               {name: 'TR2', file: 'TR2.jpg', theme_id: 2},
+               {name: 'TR3', file: 'TR3.jpg', theme_id: 2},
+               {name: 'TR4', file: 'TR4.jpg', theme_id: 2},
+               {name: 'TR5', file: 'TR5.jpg', theme_id: 2},
+               {name: 'KV1', file: 'KV1.jpg', theme_id: 3},
+               {name: 'KV2', file: 'KV2.jpg', theme_id: 3},
+               {name: 'KV3', file: 'KV3.jpg', theme_id: 3},
+               {name: 'KUB1', file: 'KUB1.jpg', theme_id: 4},
+               {name: 'KUB2', file: 'KUB2.jpg', theme_id: 4},
+               {name: 'KUB3', file: 'KUB3.jpg', theme_id: 4}
              ])
 
 Theme.delete_all
@@ -22,9 +29,9 @@ Theme.reset_pk_sequence
 Theme.create([
 
                {name: "-----"},      # 1 Нет темы
-               {name: "Какое из произведений художника О.Ренуара наилучшим образом характеризует его творчество?"},      # 2
-               {name: "Какое из произведений художника П.Пикассо наилучшим образом характеризует его творчество?"},      # 3
-               {name: "Какое из произведений художника А.Матисса наилучшим образом характеризует его творчество?"},      # 4
+               {name: "Сколько треугольников на картинке?"},      # 2
+               {name: "Сколько квадратов на картинке?"},      # 3
+               {name: "Сколько элементов нужно добавить, чтобы получился кубик?"},      # 4
              ])
 
 

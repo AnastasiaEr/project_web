@@ -58,10 +58,10 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 #gem 'rails-asset-jqueryui'
 
 # Use SАSS for stylesheets
-# gem 'sass-rails', '~> 5.0'
+#gem 'sass-rails'
 
 # Installed 3.3.7 - пример
-# gem 'bootstrap-sass', '3.3.7'
+gem 'bootstrap-sass', '3.4.1'
 
 # Icons fonts
 gem 'font-awesome-sass' #, '~> 4.6.2'

@@ -4,7 +4,7 @@ class WorkController < ApplicationController
     @images_count = Image.all.count
     # @selected_theme = "Select theme to leave your answer"
     @selected_theme = t(".def_select_theme")
-    @selected_image_name = 'радуга'
+    @selected_image_name = ''
     @values_qty = Value.all.count
     @current_locale = I18n.locale
     session[:selected_theme_id] = @selected_theme # to display nothing
@@ -26,8 +26,8 @@ class WorkController < ApplicationController
       theme = "Select theme to leave your answer"
       theme_id = 1
       values_qty = Value.all.count.round
-      data = { index: 0, name: 'радуга', values_qty: values_qty,
-               file: 'raduga5обрез.jpg', image_id: 4,
+      data = { index: 0, name: '', values_qty: values_qty,
+               file: 'Выбор темы.jpg', image_id: 4,
                current_user_id: current_user_id, user_valued: false,
                common_ave_value: 0, value: 0 }
     else
