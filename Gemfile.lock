@@ -277,7 +277,7 @@ DEPENDENCIES
   tzinfo-data
   web-console (>= 4.1.0)
   webdrivers
-  webpack
+  webpack (~> 0.4.2)
   webpacker (~> 5.0)
   will_paginate
 
